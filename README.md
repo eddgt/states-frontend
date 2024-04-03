@@ -1,4 +1,4 @@
-# my-vue-app
+# states-frontend
 
 ## Project setup
 ```
