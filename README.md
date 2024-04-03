@@ -23,5 +23,21 @@ yarn build
 yarn lint
 ```
 
+## Dockerfile
+### Create de Docker image
+Building the Docker image: Open a terminal in the directory where your Dockerfile is located and execute the following command to build the Docker image:
+
+```
+docker build -t image_name .
+```
+
+### Running the Docker container
+Running the Docker container: Once the Docker image has been successfully built, you can run a container based on that image using the following command:
+
+```
+docker run -p 8080:8080 image_name
+```
+
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
