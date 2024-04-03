@@ -43,7 +43,7 @@ export default {
     },
     data() {
       return {
-        stateDetails: [] // Detalles del estado
+        stateDetails: [] // State details
       };
     },
     computed: {
@@ -62,19 +62,19 @@ export default {
     }
   },
   created() {    
-    this.fetchStateDetails(); // Llama a fetchStateDetails cuando el componente se crea
+    this.fetchStateDetails(); // Call fetchStateDetails when the component is created
   },
   watch: {
       selectedState: {
           immediate: true,
           handler() {
-              this.fetchStateDetails(); // No se pasa newVal como argumento
+              this.fetchStateDetails(); // No newVal is passed as an argument
           }
       }
   },
 methods: {
-    async fetchStateDetails() { // No se espera recibir newVal como argumento
-        const newVal = this.selectedState.id; // Obtenemos el valor de selectedStateId
+    async fetchStateDetails() { 
+        const newVal = this.selectedState.id;
         console.log("newVal " + newVal)
         if (newVal !== null) {
             try {
@@ -97,7 +97,7 @@ methods: {
   
   
   <style scoped>
-  /* Estilos CSS proporcionados */
+  
   .state-details-container {
     display: flex;
     justify-content: center;

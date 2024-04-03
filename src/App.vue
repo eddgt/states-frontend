@@ -25,7 +25,7 @@ export default {
     return {
       states: [],
       selectedState: null,
-      selectedStateId: null, // Agrega selectedStateId como una variable de datos
+      selectedStateId: null, 
       filterText: ''
     };
   },
@@ -41,8 +41,8 @@ export default {
         console.error('Error fetching states:', error);
       }
     },
-    handleSingleClick(state) { // Manejar el evento de clic en el estado
-      this.selectedStateId = state.id; // Actualizar selectedStateId con el ID del estado
+    handleSingleClick(state) { 
+      this.selectedStateId = state.id;
       this.selectedState = state; 
     },
     handleDoubleClick(state) {

@@ -26,21 +26,21 @@
   </script>
   
   <style scoped>
-  /* Estilos personalizados */
+  
   .filter-box {
     position: fixed;
-    top: 20px; /* Ajusta la distancia desde la parte superior */
-    right: 20px; /* Ajusta la distancia desde la derecha */
-    z-index: 999; /* Asegura que la caja del filtro esté en la parte superior */
-    width: 250px; /* Ancho personalizado de la caja de filtro */
+    top: 20px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    z-index: 999; /* Ensure that the filter box is at the top */
+    width: 250px; /* Custom width for the filter box */
   }
   
-  /* Ajustes para la caja de búsqueda */
+  /* custom for filter box */
   .input-group {
     width: 100%;
   }
   
-  /* Estilo del icono de búsqueda */
+  /* search icon */
   .input-group-text {
     cursor: pointer;
   }

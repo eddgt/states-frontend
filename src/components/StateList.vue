@@ -29,15 +29,13 @@ export default {
   props: {
     states: Array,
     filteredStates: Array,
-    selectedStateId: Number // Propiedad que indica el estado seleccionado
+    selectedStateId: Number
   },
   methods: {
-    handleSingleClick(state) {
-      // Emitir el ID del estado cuando se hace clic en él desde el panel izquierdo
+    handleSingleClick(state) {      
       this.$emit('single-click', state); 
     },    
-    handleDoubleClick(state) {
-      // Manejar el doble clic
+    handleDoubleClick(state) {      
       this.$emit('double-click', state);        
     }
   }
@@ -45,8 +43,6 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos CSS para el componente */
-
 .state-list {
   display: flex;
   justify-content: center;
@@ -55,8 +51,8 @@ export default {
 .panel-left, .panel-right {
   flex: 1;
   padding: 10px;
-  overflow-y: auto; /* Habilitar el desplazamiento vertical */
-  max-height: calc(100vh - 100px); /* Limitar la altura del panel */
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: calc(100vh - 100px); /* Limit the height of the panel */
   max-width: 400px;
 }
 
