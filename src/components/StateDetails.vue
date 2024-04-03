@@ -17,6 +17,10 @@
                 <span>{{ county.name }}</span>
                 <span class="badge bg-info">{{ county.population }}</span>
               </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <strong>Total Population: </strong>
+                <span class="badge bg-info">{{ totalPopulation }}</span>
+              </li>
             </ul>
             <br>
             <p v-if="selectedState" class="record-status">
@@ -39,12 +43,12 @@ export default {
     },
     data() {
       return {
-        stateDetails: null // Detalles del estado
+        stateDetails: [] // Detalles del estado
       };
     },
     computed: {
       isCountySumEqual() {
-      if (!this.selectedState || !Array.isArray(this.selectedState)) {
+      if (!this.selectedState ) {
         return false;
       }
       const sumOfCountyPopulations = this.stateDetails.reduce((total, county) => total + county.population, 0);
@@ -57,8 +61,7 @@ export default {
       return this.stateDetails.reduce((total, county) => total + county.population, 0);
     }
   },
-  created() {
-        console.log("StateDetails.vue this.stateDetails " + this.stateDetails)
+  created() {    
     this.fetchStateDetails(); // Llama a fetchStateDetails cuando el componente se crea
   },
   watch: {

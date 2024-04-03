@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <FilterBox @filter-change="handleFilterChange" />
-    <StateList :states="filteredStates" :selectedStateId="selectedStateId" @double-click="handleDoubleClick" @single-click="handleSingleClick" />
+    <StateList :states="states" :filteredStates="filteredStates" :selectedStateId="selectedStateId" @double-click="handleDoubleClick" @single-click="handleSingleClick" />
     <StateDetails v-if="selectedState" :selectedState="selectedState" />
   </div>
 </template>

@@ -13,7 +13,7 @@
     <div class="panel-right">
       <h3>State List (Right Panel)</h3>
       <ul class="list-group">
-        <li v-for="state in states" :key="state.id" 
+        <li v-for="state in filteredStates" :key="state.id" 
             :class="{ 'list-group-item': true, 'selected': state.id === selectedStateId }"
             @click="handleSingleClick(state)" @dblclick="handleDoubleClick(state)">
           {{ state.name }}
@@ -28,6 +28,7 @@ export default {
   name: 'StateList',
   props: {
     states: Array,
+    filteredStates: Array,
     selectedStateId: Number // Propiedad que indica el estado seleccionado
   },
   methods: {
@@ -45,8 +46,10 @@ export default {
 
 <style scoped>
 /* Estilos CSS para el componente */
+
 .state-list {
   display: flex;
+  justify-content: center;
 }
 
 .panel-left, .panel-right {
@@ -54,6 +57,7 @@ export default {
   padding: 10px;
   overflow-y: auto; /* Habilitar el desplazamiento vertical */
   max-height: calc(100vh - 100px); /* Limitar la altura del panel */
+  max-width: 400px;
 }
 
 h3 {
