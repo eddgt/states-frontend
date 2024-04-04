@@ -13,6 +13,8 @@ for example VUE_APP_API_URL=http://localhost:1234, it depends from de Backend AP
 yarn serve
 ```
 
+Go to http://localhost:8080 to test the app
+
 ### Compiles and minifies for production
 ```
 yarn build
